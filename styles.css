@@ -148,6 +148,7 @@ header {
     display: flex;
     justify-content: center;
     padding-bottom: 50px;
+    min-height: 150px;
 }
 
 .illustration {
@@ -157,8 +158,8 @@ header {
     background-size: cover;
     filter: grayscale(100%);
     background-position: center;
-    transition: filter 2s ease-in;
-    -webkit-transition: -webkit-filter 2s linear
+    transition: filter 1s linear;
+    -webkit-transition: -webkit-filter 1s linear;
 }
 
 .illustration:hover {

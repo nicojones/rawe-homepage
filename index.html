@@ -12,6 +12,7 @@
 
 <body>
 
+
     <div id="js-dev" style="display: none">
         <!-- Dev links -->
         <a href="https://tracker.rawe.ltd" class="js-dev__a">Issue tracker</a> |
@@ -101,10 +102,12 @@
         }, false);
         // document.body.addEventListener('keyup', () => (jsDev.style.display = 'none'), false);
 
-        // const images = ['build'];
+
+        // Script at the beginning to allow for image caching!
         const images = ['build', 'draw', 'tools', 'pencil', 'website'];
         const img = images[Math.floor(Math.random() * images.length)];
         document.getElementById('corporate').innerHTML = `<span alt="${ img } Illustration" class="illustration i--${ img }"></span>`
+   
     </script>
 </body>
 
