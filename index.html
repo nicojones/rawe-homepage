@@ -96,7 +96,8 @@
         // CUSTOM
         var jsDev = document.getElementById('js-dev');
         document.body.addEventListener('keydown', function(e) {
-            if ((e.ctrlKey || e.metaKey || e.shiftKey) && (e.key === 'D' || e.key === 'I')) {
+            console.log(e);
+            if ((e.ctrlKey || e.metaKey || e.altKey) && (e.code === 'KeyI')) {
                 jsDev.style.display = 'flex';
             }
         }, false);
