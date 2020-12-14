@@ -1,4 +1,7 @@
 :root {
+    --rawe-E-color: rgb(1, 131, 143); /* #01838f; */
+
+
     --footer-height: 75px;
     --footer-bg: #f0f0f0;
     --footer-color: #aaa;
@@ -17,10 +20,10 @@
     /* Contact form */
     --label-width: 75px;
     /* Services list padding */
-    --sl-padding: 0 0 0 30px;
+    --sl-padding: 30px;
     --item-height: 40px;
     /* ************** inputs */
-    --input-border-color: #aaa;
+    --input-border-color: var(--rawe-E-color);
     --input-border-width: 1px;
     --input-border-width-focus: 3px;
     --input-transition-time: 0.2s;
@@ -80,6 +83,10 @@ footer {
     color: var(--footer-color);
 }
 
+main {
+    padding-bottom: var(--header-margin-bottom);
+}
+
 header {
     display: flex;
     flex-direction: var(--header-direction);
@@ -137,12 +144,22 @@ header {
 
 .services__list {
     list-style-type: none;
-    padding: var(--sl-padding);
+    padding: 0 0 0 var(--sl-padding);
 }
 
 .services__item {
     height: var(--item-height);
+    position: relative;
 }
+.services__item::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: var(--rawe-E-color); /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    font-size: 30px;
+    position: absolute;
+    top: -10px;
+    left: -20px;
+  }
 
 #corporate {
     display: flex;
@@ -201,7 +218,7 @@ header {
 }
 
 .contact-form {
-    padding: var(--sl-padding);
+    padding: 0 0 0 var(--sl-padding);
 }
 
 label {
@@ -222,7 +239,6 @@ textarea {
     /* border-color: transparent; */
     transition: all var(--input-transition-time) linear;
     font-family: inherit;
-    border-color: var(--body-color);
 }
 
 textarea {
@@ -262,4 +278,12 @@ input {}
 .js-dev__a {
     color: #eee;
     padding: 0 50px;
+}
+
+.color {
+    color: var(--rawe-E-color);
+}
+
+.secondary {
+    opacity: 0.3;
 }
