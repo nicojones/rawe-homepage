@@ -257,6 +257,8 @@ textarea:focus {
 .submit {
     padding: 0 30px;
     margin-top: 20px;
+    border-radius: 0;
+    background-color: var(--footer-bg);
 }
 
 #js-dev {
